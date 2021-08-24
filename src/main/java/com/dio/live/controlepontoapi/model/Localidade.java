@@ -3,6 +3,7 @@ package com.dio.live.controlepontoapi.model;
 import lombok.*;
 
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Getter
@@ -16,7 +17,7 @@ public class Localidade {
     @Id
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     private NivelAcesso nivelAcesso;
 
 
