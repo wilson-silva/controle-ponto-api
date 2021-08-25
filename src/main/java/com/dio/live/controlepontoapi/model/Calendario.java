@@ -18,5 +18,5 @@ public class Calendario {
     @ManyToOne
     private TipoData tipoData;
     private String descricao;
-    private LocalDateTime data;
+    private LocalDateTime dataEspecial;
 }
