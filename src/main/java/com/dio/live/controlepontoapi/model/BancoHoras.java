@@ -22,15 +22,17 @@ public class BancoHoras {
     @Embeddable
     public class BancoHorasId implements Serializable {
         private long idBancoHoras;
-        private long idMovimento;
+        private long idMovimentacao;
         private long idUsuario;
     }
 
     @EmbeddedId
     private BancoHorasId id;
-    private CategoriaUsuario categoriaUsuario;
+
     private LocalDateTime dataTrabalhada;
+
     private BigDecimal quantidadeHorasTrabalhadas;
+
     private BigDecimal saldoHorasTrabalhadas;
 
 }
