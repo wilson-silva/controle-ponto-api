@@ -2,6 +2,8 @@ package com.dio.live.controlepontoapi.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,7 +14,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Usuario {
+
+    @Id
     private Long id;
 
     @ManyToOne
@@ -27,8 +32,11 @@ public class Usuario {
 
     @ManyToOne
     private JornadaTrabalho jornadaTrabalho;
+
     private BigDecimal tolerancia;
+
     private LocalDateTime inicioJornada;
+
     private LocalDateTime finalJornada;
 
 }
